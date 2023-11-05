@@ -175,7 +175,7 @@ const Lists = () => {
                         borderColor="#ddd"
                         p={4}
                         borderRadius="md"
-                        boxShadow='dark-lg' p='6' rounded='md' bg='white'
+                        boxShadow='dark-lg'  rounded='md' bg='white'
                         bgGradient='linear(to-l, #b57bee, #392d69)'
                       >
                          <Text color={"white"}>Year: {prize.year}</Text>
@@ -230,7 +230,7 @@ const Lists = () => {
                 borderColor="#ddd"
                 p={4}
                 borderRadius="md"
-                boxShadow='dark-lg' p='6' rounded='md' bg='white'
+                boxShadow='dark-lg'  rounded='md' bg='white'
                         bgGradient='linear(to-l, #b57bee, #392d69)'
               >
                 <Text color={"white"}>
