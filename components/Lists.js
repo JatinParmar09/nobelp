@@ -110,6 +110,7 @@ const Lists = () => {
   
     return (
       <ChakraProvider>
+        <Container background={"#b57bee"}>
         <ColorModeProvider>
           <Container maxW="xl" p={4}>
             <Box textAlign="right">
@@ -127,12 +128,14 @@ const Lists = () => {
                 placeholder="Search"
               /> */}
             </Box>
+              <Text fontSize='2xl' as='b' align='center'>Name Of All Nobel Prize Winners</Text>
             <Box display="flex" justifyContent="space-between" mb={4}>
               <Select
+              boxShadow='dark-lg' p='2' rounded='md' bg='white'
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 placeholder="Filter by Category"
-                w="45%"
+                w="70%"
               >
                 <option value="">All Categories</option>
               {categoryOptions.map((category) => (
@@ -143,10 +146,11 @@ const Lists = () => {
               </Select>
   
               <Select
+              boxShadow='dark-lg' p='2' rounded='md' bg='white'
                 value={selectedYear}
                 onChange={(e) => setSelectedYear(e.target.value)}
                 placeholder="Filter by Year"
-                w="45%"
+                w="70%"
               >
                 <option value="">All Years</option>
               {yearOptions.map((year) => (
@@ -171,6 +175,7 @@ const Lists = () => {
                         borderColor="#ddd"
                         p={4}
                         borderRadius="md"
+                        boxShadow='dark-lg' p='6' rounded='md' bg='white'
                         bgGradient='linear(to-l, #b57bee, #392d69)'
                       >
                          <Text color={"white"}>Year: {prize.year}</Text>
@@ -192,6 +197,7 @@ const Lists = () => {
   
                 <Container mt={3} display="flex" justifyContent="center" gap='50px'>
                   <Button
+                  boxShadow='dark-lg' p='3' rounded='md' bg='white'
                      leftIcon={<ArrowBackIcon />}
                     onClick={() => handlePageChange(currentPage - 1)}
                     disabled={currentPage <= 1}
@@ -199,6 +205,7 @@ const Lists = () => {
                     Previous
                   </Button>
                   <Button
+                  boxShadow='dark-lg' p='3' rounded='md' bg='white'
                     rightIcon={<ArrowForwardIcon />}
                     
                     onClick={() => handlePageChange(currentPage + 1)}
@@ -223,17 +230,19 @@ const Lists = () => {
                 borderColor="#ddd"
                 p={4}
                 borderRadius="md"
+                boxShadow='dark-lg' p='6' rounded='md' bg='white'
+                        bgGradient='linear(to-l, #b57bee, #392d69)'
               >
-                <Text>
+                <Text color={"white"}>
                   Name: {laureate.firstname} {laureate.surname}
                 </Text>
-                <Text>Number of Nobel Prizes: {laureate.count}</Text>
+                <Text color={"white"}>Number of Nobel Prizes: {laureate.count}</Text>
               </ListItem>
             ))}
           </List>
         </Container>
       )}
-        </ColorModeProvider>
+        </ColorModeProvider></Container>
       </ChakraProvider>
     );
   };
