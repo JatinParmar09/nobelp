@@ -30,7 +30,7 @@ const Lists = () => {
   useEffect(() => {
     const getPrizes = async () => {
         try {
-          const res = await axios.get('/api/prize.json'); // Use the local /api path
+          const res = await axios.get('http://api.nobelprize.org/v1/prize.json'); // Use the local /api path
           const prizes = res.data.prizes.filter(
             (prize) =>
               parseInt(prize.year) >= 1900 &&
